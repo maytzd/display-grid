@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+/*font para titulo */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+/*font para paragrafo*/
+
+/*reset basic */
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+/* display: grid serve para organizar os elementos */
+header{
+    background-color: #D62300;
+    display: grid;
+    color: white;
+
+    /*criar duas colunas
+    a primeira cria 1 fração de espaço disponível
+    a segunda cria 2 frações de espaço disponível */
+    grid-template-columns: 1fr 2fr; /*define e desenha a quantidade de colunas */
+    align-items: center;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+}
+
+header h1:hover{
+    color: #502314;
+    cursor: pointer;
+}
+
+h1{
+    font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h3{
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 650;
+    font-style: normal;
+
+}
+
+h2{
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+p{
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+strong{
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 650;
+    font-style: normal;
+}
+
+
+nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    justify-content: center;
+}
+
+nav a {
+    color: aliceblue;
+    text-decoration: none;
+
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+nav a:hover{
+    color: #502314;
+    cursor: pointer;
+}
+
+main h2 {
+    background-color: #502314;
+    text-align: center;
+    justify-content: center;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+
+}
+
+main h2:hover{
+    background-color: #31a105;
+    color:white;
+    cursor: pointer;
+}
+
+.favoritos{
+    background-color: #FF8733;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card{
+    background-color: #f12b03;
+    color: white;
+    padding: 15px;
+    border-radius: 19px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.card img{
+    width: 100%;
+    height: auto; 
+    object-fit: cover; /*para não cortar a imagem */
+    border-radius: 8px;
+
+}
+
+.card strong {
+    background-color: #502314;
+    border-radius: 9px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.card strong:hover{
+    background-color: #31a105;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.card h3{
+    margin-top: 20px;
+}
+
+
+/* responsividade : é a capacidade de uma página na internet se adpatar a diferentes dispositvos/telas sendo assim, organizando os elementos, fotos, textos e etc conforme a necessidade */
+
+
+/*media query para tablets para a tela se comportar sobre tablets*/
+@media (max-width:800px){
+    .favoritos{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/*media query para se comportar em telas de celular */
+@media (max-width:500px){
+    header{
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    nav{
+        justify-content: center;
+    }
+
+    .favoritos{
+        grid-template-columns: 1fr;
+    }
+}

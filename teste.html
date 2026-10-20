@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /*grid-template-columns - serve para definir quantas colunas gostaria de colocar */
+        /*1fr  para se adaptar a tela do celular */
+        .container{
+            background-color: brown;
+            height: 400px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card{
+            background-color: rgb(110, 226, 43);
+            height: 100px;
+        }
+
+        @media(max-width:800px){
+            .card{
+                background-color: black;
+                font-size: 50px;
+                color: blanchedalmond;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">Mayara</div>
+        <div class="card">Mayara</div>
+        <div class="card">Mayara</div>
+        <div class="card">Mayara</div>
+        <div class="card">Mayara</div>
+        <div class="card">Mayara</div> 
+
+    </div>
+    
+</body>
+</html>
